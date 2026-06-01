@@ -1,4 +1,4 @@
-# Action Agent Lite 项目介绍
+# Action Agent Lite 分支介绍
 
 > 纯浏览器端的 AI 助手交互平台
 
