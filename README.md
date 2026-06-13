@@ -18,7 +18,7 @@
 ### 一句话体验
 双击 index.html → 配置 API Key → 授权文件夹 → 开始对话。
 
-text
+
 
 ---
 
@@ -220,7 +220,6 @@ Edge 90+	✅ 完整支持（v3.10 额外兼容 Edge 88-92）
 Opera 72+	✅ 完整支持
 Firefox	❌ 不支持 File System Access API
 Safari	❌ 不支持 File System Access API
-📄 License
-MIT
+📄 License MIT
 
 一句话总结：Action Agent 让大模型成为你的本地文件操作助手——双击运行、授权文件夹、开始对话。日常用 v3.10 轻量版，重度用 v3.0 全功能版。
