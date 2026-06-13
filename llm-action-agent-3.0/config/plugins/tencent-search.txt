@@ -1,0 +1,11 @@
+@name: tencent-search
+@title: 腾讯云联网搜索
+
+===INFO===
+使用腾讯云 WSA（联网搜索）API 进行网络搜索。需要先在 config/tencent-credentials.json 中配置 SecretId 和 SecretKey。
+
+接口：SearchPro (Version: 2025-05-08)
+地址：wsa.tencentcloudapi.com
+签名方法：TC3-HMAC-SHA256
+===USE===
+当用户需要搜索网络信息（人物、新闻、事件等）时使用。动作类型为 tencent_search，参数：query（必填，搜索词）、cnt（可选，结果数量10~50）、site（可选，指定域名过滤）、mode（可选，0自然搜索/1多模态/2混合）

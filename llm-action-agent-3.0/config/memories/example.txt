@@ -1,0 +1,7 @@
+@name: example
+@title: 示例记忆
+@desc: 演示记忆文档格式，可删除
+
+===CONTENT===
+这是一篇示例持久记忆。
+大模型可通过 list_memories 发现它，再用 read_memory 读取全文。

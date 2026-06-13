@@ -1,0 +1,14 @@
+@name: example-workflow
+@title: 示例工作流插件
+
+===INFO===
+这是一个示例插件，展示插件文本格式。
+
+操作流程：
+1. 使用 list_dir 查看工作区文件
+2. 使用 read_file 读取目标文件
+3. 分析内容后使用 write_file 输出结果
+
+注意：path 相对于工作区根目录，不要包含未授权的父目录路径。
+===USE===
+当用户要求「按示例流程处理文件」或「使用示例插件」时，先 read_plugin 加载 example-workflow，再严格按 INFO 中的步骤执行动作。

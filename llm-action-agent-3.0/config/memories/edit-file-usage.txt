@@ -1,0 +1,46 @@
+@name: edit-file-usage
+@title: edit_file 工具的正确用法与注意事项
+@desc: edit_file 动作的操作类型说明和使用建议
+
+===CONTENT===
+## edit_file 动作的正确用法
+
+`edit_file` 是基于浏览器文件系统（无需后端）的文件编辑动作。
+
+### 支持的操作类型 (op)
+
+1. **replaceAll** — 用 replacement 替换所有匹配到的 pattern（字符串匹配）
+   - pattern: 要匹配的字符串
+   - replacement: 替换后的内容
+
+2. **replace** — 替换首个匹配的 pattern；当 flags 包含 'g' 时行为同 replaceAll
+   - pattern: 要匹配的字符串
+   - replacement: 替换后的内容
+   - flags: 可选，如 'g' 全局替换
+
+3. **replaceLines** — 替换指定行范围的内容
+   - from: 起始行号（0-based）/ 或 pattern 字符串定位
+   - to: 结束行号（可选）
+   - replacement: 替换为新内容
+
+4. **insertLines** — 在指定位置插入内容
+   - at: 行号（0-based）/ 或 pattern 定位
+   - where: 'before'(默认) 或 'after'
+   - text / content: 要插入的内容
+
+5. **removeLines** — 删除指定行范围
+   - from: 起始行号（0-based）/ 或 pattern 定位
+   - to: 结束行号（可选）
+
+6. **prepend** — 在文件开头添加内容
+   - text / content: 要添加的内容
+
+7. **append** — 在文件末尾追加内容
+   - text / content: 要追加的内容
+
+### 使用建议
+- 操作前先用 `read_file` 确认当前内容
+- 优先使用 `replaceAll` 模式（字符串匹配，不依赖行号）
+- 涉及整文件替换时用 `write_file` 更安全
+- `replaceLines` / `insertLines` / `removeLines` 尽量配合 `pattern` 参数而非行号，避免行号偏移
+- 连续编辑时注意文件内容已变化，行号会改变

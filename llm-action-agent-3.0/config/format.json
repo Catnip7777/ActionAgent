@@ -1,0 +1,8 @@
+{
+  "formatType": "xml_tag",
+  "startTag": "<action_fix>",
+  "endTag": "</action_fix>",
+  "fenceLang": "action",
+  "customRegex": "<action>([\\s\\S]*?)</action>",
+  "escapePrefix": "\\"
+}
